@@ -203,6 +203,8 @@ int main(int argc, char *argv[])
         printf("\"%s\"\n", currentLine);
     }
     
+    string in = input("Ciao: ");
+    print(in);
 }
 
 

@@ -37,6 +37,7 @@ void get_vector_funcs(vector_functions *vecf);
 
 
 vvector* vvcreate(void);
+void vvdestroy(vvector **v);
 int vvcount(vvector* v);
 int vvsize(vvector* v);
 void vvincrement(vvector *v);

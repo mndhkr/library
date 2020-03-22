@@ -9,6 +9,8 @@
 #ifndef input_h
 #define input_h
 
-#include <stdio.h>
+#include <strings.h>
+
+string input(string output);
 
 #endif /* input_h */

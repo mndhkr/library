@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "def.h"
 #include "variable_vector.h"
+#include "memory.h"
 
 
 vvector* vvcreate(void);
