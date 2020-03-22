@@ -167,3 +167,10 @@ void* vvgetprev(vvector *v) {
         return null;
     
 }
+
+void vvtrim(vvector *v) {
+    if(v->count < v->size) {
+        v->vector = (void**)realloc(v->vector, (v->count) * sizeof(void*));
+        v->size = v->count;
+    }
+}

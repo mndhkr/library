@@ -19,3 +19,13 @@ typedef struct memory_functions {
 
 
 void setup_memory_functions(memory_functions* memf);
+
+
+void* alloc(int size, int count);
+void* re_alloc(void* ptr, int add);
+int retain(void* ptr);
+int release(void** ptr);
+bool mem_exists(void* ptr);
+bool mem_isValid(void* ptr);
+int retains(void* ptr);
+

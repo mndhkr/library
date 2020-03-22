@@ -3,11 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "def.h"
-
-#include "strings.h"
-
-#include <limits.h>
+#include "stdinclude.h"
 
 
 
@@ -132,3 +128,8 @@ String trim(String str) {
     return substring(str, start, end);
 }
 
+string strCopy(string str) {
+    string buffer = alloc(strLength(str)+1, sizeof(char));
+    sprintf(buffer, "%s", str);
+    return buffer;
+}

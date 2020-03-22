@@ -24,3 +24,4 @@ bool strIn(char* str, char* pattern);
 String *strSplitChars(char* s, char *sep);
 
 String trim(String str);
+string strCopy(string str);

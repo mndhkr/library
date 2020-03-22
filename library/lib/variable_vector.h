@@ -34,3 +34,20 @@ typedef struct vector_functions vector_functions;
 
 struct vector_functions *setup_vector_functions(void);
 void get_vector_funcs(vector_functions *vecf);
+
+
+vvector* vvcreate(void);
+int vvcount(vvector* v);
+int vvsize(vvector* v);
+void vvincrement(vvector *v);
+void vvsetinc(vvector *v, int inc);
+int vvappend(vvector *v, void* elem);
+int vvadd(vvector *v, void* elem);
+int vvpush(vvector* v, void *elem);
+void* vvpeek(vvector* v);
+void* vvpop(vvector* v);
+bool vvhasnext(vvector* v);
+bool vvhasprev(vvector* v);
+void* vvgetnext(vvector *v);
+void* vvgetprev(vvector *v);
+void vvtrim(vvector *v);

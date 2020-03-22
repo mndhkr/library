@@ -2,17 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "lib/def.h"
-
-#include "lib/variable_vector.h"
-
-#include "lib/dictionary.h"
-
-#include "lib/strings.h"
-
-#include "lib/memory.h"
-
-#include "print.h"
+#include "lib/stdinclude.h"
 
 int lldeftype;
 
@@ -52,6 +42,10 @@ bool streq(void* s1, void* s2) {
 void teststatic() {
     static int y = 0;
     printf("%d\n", y);
+}
+
+void print_retains_and_value(memory_functions memf, int* ptr) {
+    printf("retains: %d, value: %d\n", memf.getRetains(ptr), *ptr);
 }
 
 //struct list_functions *listf;
@@ -191,8 +185,24 @@ int main(int argc, char *argv[])
     for(int i = 0; str[i]!= null; i++) {
         printf("\"%s\"\n", str[i]);
     }
+    
+    
+    file *f = openFile("/Users/shimoda/test.txt", read);
+    vvector *lines = readLines(f);
+    for(int i = 0; i < lines->count; i++) {
+        printf("newline: \"%s\"\n", lines->vector[i]);
+    }
+    
+    print("\n");
+    print("\n");
+    print("\n");
+    print("\n");
+
+    char* currentLine;
+    while((currentLine = readLine(f))) {
+        printf("\"%s\"\n", currentLine);
+    }
+    
 }
 
-void print_retains_and_value(memory_functions memf, int* ptr) {
-    printf("retains: %d, value: %d\n", memf.getRetains(ptr), *ptr);
-}
+

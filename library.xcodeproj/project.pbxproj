@@ -14,6 +14,9 @@
 		3246D63524272E0D00799D21 /* strings.c in Sources */ = {isa = PBXBuildFile; fileRef = 3246D62D24272E0C00799D21 /* strings.c */; };
 		3246D63624272E0D00799D21 /* circular_linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 3246D62F24272E0D00799D21 /* circular_linked_list.c */; };
 		3246D6392427304E00799D21 /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = 3246D6382427304E00799D21 /* print.c */; };
+		3299EF162427345D00652E46 /* files.c in Sources */ = {isa = PBXBuildFile; fileRef = 3299EF152427345D00652E46 /* files.c */; };
+		3299EF182427388100652E46 /* stdinclude.h in Sources */ = {isa = PBXBuildFile; fileRef = 3299EF172427388100652E46 /* stdinclude.h */; };
+		3299EF1C242748AE00652E46 /* input.c in Sources */ = {isa = PBXBuildFile; fileRef = 3299EF1B242748AE00652E46 /* input.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +47,11 @@
 		3246D63224272E0D00799D21 /* memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory.h; sourceTree = "<group>"; };
 		3246D6372427304E00799D21 /* print.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = print.h; sourceTree = "<group>"; };
 		3246D6382427304E00799D21 /* print.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = print.c; sourceTree = "<group>"; };
+		3299EF142427345D00652E46 /* files.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = files.h; sourceTree = "<group>"; };
+		3299EF152427345D00652E46 /* files.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = files.c; sourceTree = "<group>"; };
+		3299EF172427388100652E46 /* stdinclude.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stdinclude.h; sourceTree = "<group>"; };
+		3299EF1A242748AE00652E46 /* input.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = input.h; sourceTree = "<group>"; };
+		3299EF1B242748AE00652E46 /* input.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = input.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,11 @@
 				3246D62824272DEF00799D21 /* variable_vector.h */,
 				3246D6372427304E00799D21 /* print.h */,
 				3246D6382427304E00799D21 /* print.c */,
+				3299EF142427345D00652E46 /* files.h */,
+				3299EF152427345D00652E46 /* files.c */,
+				3299EF172427388100652E46 /* stdinclude.h */,
+				3299EF1A242748AE00652E46 /* input.h */,
+				3299EF1B242748AE00652E46 /* input.c */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -161,9 +174,12 @@
 			files = (
 				3246D62924272DEF00799D21 /* variable_vector.c in Sources */,
 				3246D63324272E0D00799D21 /* memory.c in Sources */,
+				3299EF1C242748AE00652E46 /* input.c in Sources */,
 				3246D6392427304E00799D21 /* print.c in Sources */,
+				3299EF162427345D00652E46 /* files.c in Sources */,
 				3246D62024272DC300799D21 /* main.c in Sources */,
 				3246D63624272E0D00799D21 /* circular_linked_list.c in Sources */,
+				3299EF182427388100652E46 /* stdinclude.h in Sources */,
 				3246D63424272E0D00799D21 /* dictionary.c in Sources */,
 				3246D63524272E0D00799D21 /* strings.c in Sources */,
 			);

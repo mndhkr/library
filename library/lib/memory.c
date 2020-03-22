@@ -9,7 +9,7 @@
 static dictionary_functions dictf;
 static dict* _dict = NULL;
 
-void* alloc(int size, int count) {
+void* alloc(int count, int size) {
 	if (_dict == NULL) {
 		setup_dictionary_functions_struct(&dictf);
 		_dict = dictf.create();
