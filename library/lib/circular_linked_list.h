@@ -50,8 +50,8 @@ typedef struct list_functions list_functions;
 struct list_functions * create_list_functions_pointer(void);
 void setup_list_functions_struct(list_functions* listf);
 
-/*
-clist *clcreate();
+
+clist *clcreate(void);
 bool clinsert(clist *list, void *value);
 bool cladd(clist *list, void *value);
 // aggiusta il conteggio dei nodi dopo una manipolazione manuale.
@@ -79,7 +79,7 @@ bool clset(clist* list, int pos, void* value);
 void* clget(clist* list, int pos);
 clnode* clgetnode(clist* list, int pos);
 //void clsetnode(clist* list, void* value, int pos);
-*/
+
 
 
 

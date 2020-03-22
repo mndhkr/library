@@ -43,14 +43,18 @@ dictaddret dictadd(dict* d, void* key, void* value, bool (*equals)(void* key1, v
     listf->seek_reset(d->dict);
     while(listf->has_next(d->dict)) {
         dictnode* dnode = (dictnode*)listf->llist_next_value(d->dict);
-        if(equals == null) {
-            if(dnode->key == key) {
-                return dkeypresent;
-            }            
-        } else {
-            if(equals(dnode->key, key)) {
-                return dkeypresent;
+        if(dnode) {
+            if(equals == null) {
+                if(dnode->key == key) {
+                    return dkeypresent;
+                }
+            } else {
+                if(equals(dnode->key, key)) {
+                    return dkeypresent;
+                }
             }
+        } else {
+            break;
         }
     }
     

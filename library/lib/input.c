@@ -12,7 +12,6 @@ string input(char* output) {
     string buffer = alloc(4096, sizeof(char));
     printf("%s", output);
     fgets(buffer, 4095, stdin);
-    int len = strLength(buffer);
     string read = strCopy(buffer);
     release(&buffer);
     return read;

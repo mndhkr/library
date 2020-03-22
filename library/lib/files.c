@@ -11,7 +11,7 @@
 
 file *openFile(string path, enum fileOpenMode mode) {
     file *file = alloc(sizeof(file),1);
-    string mode_;
+    string mode_ = "r";
     if(mode == read) {
         mode_ = "r";
     }
@@ -56,7 +56,7 @@ vvector *readLines(file *f) {
         }
         fgetc(f->fp);
         currentLine[count] = 0;
-        vvadd(v, currentLine);
+        vvadd(v, trim(currentLine));
         if(c == EOF) break;
     }
     
@@ -85,6 +85,7 @@ char *readLine(file *f) {
             break;
         }
         fseek(f->fp, -count-1, SEEK_CUR);
+        if(c == EOF) count++;
         currentLine = alloc(sizeof(char), count+1);
         for(int i = 0; i < count; i++) {
             currentLine[i] = fgetc(f->fp);
@@ -95,5 +96,5 @@ char *readLine(file *f) {
         break;
     }
     
-    return currentLine;
+    return trim(currentLine);
 }
